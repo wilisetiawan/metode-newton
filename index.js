@@ -1,7 +1,7 @@
 function hitung() {
-    let x = 0.5
-    let iterasi = 5
-    let toleransi = 0.00001
+    let x
+    let iterasi
+    let toleransi
     let str;
     let arr;
     let koma += 1
