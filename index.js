@@ -1,10 +1,10 @@
 function hitung() {
-    let x;
-    let iterasi;
-    let toleransi;
+    let x = 0.5
+    let iterasi = 5
+    let toleransi = 0.00001
     let str;
     let arr;
-    let koma;
+    let koma += 1
     let lebar;
     let hasil;
 
@@ -12,15 +12,15 @@ function hitung() {
     function f(x) {
         // return Math.pow(2.7182818284, x) - 5 * Math.pow(x, 2);
         // console.log(2.7182818284 ** x - 5 * x ** 2)
-        // return 2.7182818284 ** x - 5 * x ** 2;
-        return eval(document.getElementById('f(x)').value)
+        return 2.7182818284 ** x - 5 * x ** 2;
+        // return eval(document.getElementById('f(x)').value)
     }
 
     // Turunan fx
     function f_(x) {
         // return Math.pow(2.7182818284, x) - 10 * x;
-        // return 2.7182818284 ** x - 10 * x;
-        return eval(document.getElementById('f_(x)').value)
+        return 2.7182818284 ** x - 10 * x;
+        // return eval(document.getElementById('f_(x)').value)
     }
 
     // Get input value
