@@ -1,10 +1,10 @@
 function hitung() {
-    let x
-    let iterasi
-    let toleransi
+    let x;
+    let iterasi;
+    let toleransi;
     let str;
     let arr;
-    let koma += 1
+    let koma;
     let lebar;
     let hasil;
 
@@ -30,7 +30,7 @@ function hitung() {
 
     str = toleransi.toString()
     arr = str.split('.')
-    koma = arr[1].length
+    koma = arr[1].length + 1
 
     // Show table header
     document.getElementById('tabel').innerHTML = `
