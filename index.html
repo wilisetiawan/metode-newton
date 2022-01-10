@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Metode Newton-Raphson</title>
+    <title>Metode 🧐 Newton-Raphson</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -12,51 +12,101 @@
 </head>
 
 <body class="bg-primary text-center container">
-    <div class="my-5 text-white">
-        <h2>Metode Newton-Raphson</h2>
+
+    <div class="my-5 pt-5 text-white">
+        <h2> 👨🏻‍🏫 Metode Newton-Raphson</h2>
+        <p>Aplikasi perhitungan untuk menentukan akar persamaan linear dengan metode Newton-Raphson.</p>
     </div>
-    <div class="d-flex justify-content-center mb-5">
-        <div class="rounded-3 bg-white shadow-lg" style="width: 550px;">
-            <div class="p-5 text-start">
-                <form action="">
-                    <label for="f(x)" class="mb-3 border-bottom-5 inline-block">Fungsi</label>
-                    <input name="f(x)" id="f(x)" class="form-control" required type="text"
-                        placeholder="Cth: 2.7182818284 ** x - 5 * x ** 2">
 
-                    <label for="f_(x)" class="my-3 border-bottom-5 inline-block">Turunan</label>
-                    <input name="f_(x)" id="f_(x)" class="form-control" required type="text"
-                        placeholder="Cth: 2.7182818284 ** x - 10 * x">
+    <main>
+        <div class="d-flex justify-content-center mb-5">
+            <div class="rounded-3 bg-white shadow-lg" style="width: 550px;">
+                <div class="p-5 text-start">
+                    <form action="">
+                        <label for="f(x)" class="mb-3 border-bottom-5 inline-block">Fungsi ☝🏻</label>
+                        <input name="f(x)" id="f(x)" class="form-control" required type="text"
+                            placeholder="Contoh: x**3 - 7*x + 1">
 
-                    <label for="x" class="my-3 border-bottom-5 inline-block">Nilai Awal</label>
-                    <input type="number" name="x" id="x" class="form-control" required placeholder="Contoh: 0.5">
+                        <label for="f_(x)" class="my-3 border-bottom-5 inline-block">Turunan ✌🏻</label>
+                        <input name="f_(x)" id="f_(x)" class="form-control" required type="text"
+                            placeholder="Contoh: 3*x**2 - 7">
 
-                    <label for="iterasi" class="my-3 border-bottom-5 inline-block">Jumlah iterasi</label>
-                    <input type="number" name="iterasi" id="iterasi" class="form-control" required
-                        placeholder="Contoh: 10">
+                        <label for="x" class="my-3 border-bottom-5 inline-block">Nilai Awal 🙂</label>
+                        <input type="number" name="x" id="x" class="form-control" required placeholder="Contoh: 1">
 
-                    <label for="toleransi" class="my-3 border-bottom-5 inline-block">Toleransi </label>
-                    <input type="number" name="toleransi" id="toleransi" class="form-control" required
-                        placeholder="Contoh: 0.00001">
+                        <label for="iterasi" class="my-3 border-bottom-5 inline-block">Jumlah Iterasi 🤔</label>
+                        <input type="number" name="iterasi" id="iterasi" class="form-control" required
+                            placeholder="Contoh: 10">
 
-                    <div class="d-grid gap-2 mt-4">
-                        <button type="submit" class="btn btn-primary" onclick="hitung()">Hitung</button>
-                    </div>
-                </form>
+                        <label for="toleransi" class="my-3 border-bottom-5 inline-block">Toleransi 🧐</label>
+                        <input type="number" name="toleransi" id="toleransi" class="form-control" required
+                            placeholder="Contoh: 0.00001">
+
+                        <div class="d-grid gap-2 mt-4">
+                            <button type="submit" class="py-2 btn btn-primary" onclick="hitung()">⚙️ Hitung</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center table-responsive">
+            <table class="table table-striped bg-white rounded-3 shadow-md" id="tabel"></table>
+        </div>
+        <div id="hasil" class="text-white mt-3"></div>
+    </main>
+
+    <footer class="my-5">
+        <div class="text-white">
+            <p>Kelompok 4 - Willy Setiawan | Resti Rahmawati</p>
+        </div>
+    </footer>
+
+    <!-- Button trigger modal -->
+    <div class="position-absolute top-0 end-0 me-3 mt-5 me-lg-5">
+        <button type="button" class="btn btn-light px-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span class="fw-bolder fs-5 text-primary">?</span>
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">💪🏻 Bantuan</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <h6> 👩🏻‍🏫 Syarat Penggunaan</h6>
+                    <p>Perhitungan dapat dilakukan ketika soal memenuhi syarat-syarat berikut.</p>
+                    <ol>
+                        <li>Terdapat akar persamaan linearnya</li>
+                        <li>Terdapat nilai awal atau tebakan awal</li>
+                        <li>Terdapat nilai toleransi galat relatif 𝑥</li>
+                    </ol>
+
+                    <h6 class="mt-4">👨🏻‍💻 Tips Penginputan</h6>
+                    <ul>
+                        <li>Gunakan <span class="text-danger fw-bolder">titik (.)</span> untuk penggunaan koma</li>
+                        <li>Gunakan <span class="text-danger fw-bolder">simbol bintang (*)</span> untuk perkalian</li>
+                        <li>Gunakan <span class="text-danger fw-bolder">simbol bintang 2 (**)</span> untuk bilangan
+                            pangkat</li>
+                    </ul>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-    <div class="d-flex justify-content-center">
-        <table class="table table-striped bg-white rounded-3 shadow-lg" id="tabel"></table>
-    </div>
-    <div id="hasil" class="text-white mb-5 mt-3"></div>
-    <div class="text-white mb-5 mt-3">
-        <p>Kelompok 4 - Willy Setiawan | Resti Rahmawati</p>
-    </div>
-    <script src="index.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
 
 </body>
+
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+</script>
 
 </html>
