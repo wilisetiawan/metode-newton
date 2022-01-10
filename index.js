@@ -38,7 +38,7 @@ function hitung() {
     // Show table header
     document.getElementById('tabel').innerHTML = `
     <thead class="fw-bold align-middle">
-        <td>r</td>
+        <td class="fw-bolder">r</td>
         <td>𝑥<sub>r</sub></td>
         <td>𝑓(𝑥<sub>r</sub>)</td>
         <td>𝑓'(𝑥<sub>r</sub>)</td>
