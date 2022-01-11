@@ -38,7 +38,7 @@ function hitung() {
     // Show table header
     document.getElementById('tabel').innerHTML = `
     <thead class="fw-bold align-middle">
-        <td class="fw-bolder">r</td>
+        <td>r</td>
         <td>𝑥<sub>r</sub></td>
         <td>𝑓(𝑥<sub>r</sub>)</td>
         <td>𝑓'(𝑥<sub>r</sub>)</td>
@@ -50,7 +50,7 @@ function hitung() {
 
         document.getElementById("tabel").innerHTML += `
             <tbody>
-                <td>` + Number(i + 1) + `</td>
+                <td class="fw-bolder">` + Number(i + 1) + `</td>
                 <td>` + x.toFixed(koma) + `</td>
                 <td>` + f(x).toFixed(koma) + `</td>
                 <td>` + f_(x).toFixed(koma) + `</td>
