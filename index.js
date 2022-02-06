@@ -9,6 +9,7 @@ function hitung() {
     let lbr = ['-'];
     let arrx = []
     let lebar;
+    let e = 2.71828182
 
     // Fungsi fx
     function f(x) {
